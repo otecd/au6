@@ -109,6 +109,7 @@ function buildCss() {
         }))
         .pipe(cleanCSS())
         .pipe(rename({
+            basename: nm,
             suffix: '.min'
         }))
         .pipe(gulp.dest(path.build.css))
