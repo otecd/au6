@@ -1,0 +1,36 @@
+{
+    "name": "au6",
+    "authors": [
+        "<idimzz@gmail.com> (https://github.com/papadima)"
+    ],
+    "description": "Front-end framework",
+    "main": [],
+    "keywords": [
+        "framework"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/papadima/au6",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:papadima/au6.git"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests",
+        "src",
+        "bower.json",
+        "gulpfile.js",
+        "package.json",
+        "README.md"
+    ],
+    "private": false,
+    "dependencies": {
+        "es5-shim": "^4.5.9",
+        "html5shiv": "^3.7.3",
+        "respond": "^1.4.2",
+        "ExplorerCanvas": "excanvas#*"
+    }
+}
