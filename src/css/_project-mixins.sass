@@ -11,9 +11,17 @@
             weight: $weight
         src: $src
 
-=flex-box($is-inline: false)
+=flex-box-init($is-inline: false, $wrap: wrap, $no-gitter: true)
     // display: if($is-inline, -webkit-inline-box, -webkit-box)
     display: if($is-inline, inline-flex, flex)
+    flex-wrap: $wrap
+    @if $no-gitter
+        margin: 0
+        padding: 0
+
+=flex-item-init($grow: 1, $basis: 100%)
+    flex-grow: $grow
+    flex-basis: $basis
 
 =background-image($url, $is-fixed: false)
     background:
