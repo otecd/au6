@@ -11,6 +11,10 @@
             weight: $weight
         src: $src
 
+=flex-box($is-inline: false)
+    // display: if($is-inline, -webkit-inline-box, -webkit-box)
+    display: if($is-inline, inline-flex, flex)
+
 =background-image($url, $is-fixed: false)
     background:
         image: url($url)
