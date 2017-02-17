@@ -1,0 +1,27 @@
+@media (min-width: $screen-desktop-small) and (max-width: $screen-desktop-medium - 1px)
+    .body
+        font-size: $font-size-medium
+@media (min-width: $screen-desktop-medium) and (max-width: $screen-desktop-large - 1px)
+    .body
+        font-size: $font-size-large
+@media (min-width: $screen-desktop-large)
+    .body
+        font-size: $font-size-huge
+@media (min-width: $screen-desktop-small)
+    .body
+        &__header
+            order: 1
+        &__main
+            order: 3
+            flex-grow: 3
+            flex-basis: 0
+        &__sidebar_left
+            order: 2
+        &__sidebar_right
+            order: 4
+        &__footer
+            order: 5
+        &__sidebar_left,
+        &__sidebar_right
+            flex-grow: 1
+            flex-basis: 100px

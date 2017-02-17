@@ -1,0 +1,24 @@
++font-face('Open Sans', '../fnt/Open_Sans/OpenSans')
++font-face('Open Sans', '../fnt/Open_Sans/OpenSans-Extrabold', 800)
++font-face('Open Sans', '../fnt/Open_Sans/OpenSans-Italic', 400, italic)
+
+.body
+    +flex-box()
+    flex-wrap: wrap
+    margin: 0
+    padding: 0
+    font:
+        family: 'Open Sans', sans-serif
+        weight: 400
+        style: normal
+    line-height: 1.5
+    &__header,
+    &__main,
+    &__sidebar_left,
+    &__sidebar_right,
+    &__footer
+        +flex-box()
+        margin: 0
+        padding: 0
+    &__element
+        box-sizing: border-box
