@@ -1,26 +1,56 @@
 @media (min-width: $screen-desktop-small) and (max-width: $screen-desktop-medium - 1px)
-    .body
+    .b
         font-size: $font-size-medium
+        &__e
+            // &_b
+            //     max-width: $width-base-desktop-small
+            //     min-width: $width-base-desktop-small
+            &_1-2-b
+                max-width: $width-base-desktop-small / 2
+                min-width: $width-base-desktop-small / 2
+            &_1-4-b
+                max-width: $width-base-desktop-small / 4
+                min-width: $width-base-desktop-small / 4
 @media (min-width: $screen-desktop-medium) and (max-width: $screen-desktop-large - 1px)
-    .body
+    .b
         font-size: $font-size-large
+        &__e
+            // &_b
+            //     max-width: $width-base-desktop-medium
+            //     min-width: $width-base-desktop-medium
+            &_1-2-b
+                max-width: $width-base-desktop-medium / 2
+                min-width: $width-base-desktop-medium / 2
+            &_1-4-b
+                max-width: $width-base-desktop-medium / 4
+                min-width: $width-base-desktop-medium / 4
 @media (min-width: $screen-desktop-large)
-    .body
+    .b
         font-size: $font-size-huge
+        &__e
+            // &_b
+            //     max-width: $width-base-desktop-large
+            //     min-width: $width-base-desktop-large
+            &_1-2-b
+                max-width: $width-base-desktop-large / 2
+                min-width: $width-base-desktop-large / 2
+            &_1-4-b
+                max-width: $width-base-desktop-large / 4
+                min-width: $width-base-desktop-large / 4
 @media (min-width: $screen-desktop-small)
-    .body
-        &__header
+    .b
+        &__h
             order: 1
-        &__main
+        &__m
             order: 3
             flex-basis: 0
-        &__sidebar_left
+        &__s-l
             order: 2
-        &__sidebar_right
+        &__s-r
             order: 4
-        &__footer
+        &__f
             order: 5
-        &__sidebar_left,
-        &__sidebar_right
+        &__s-l,
+        &__s-r
             max-width: 200px
             min-width: 200px
