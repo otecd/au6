@@ -1,24 +1,27 @@
 @media (min-width: $screen-desktop-small) and (max-width: $screen-desktop-medium - 1px)
     .b
         font-size: $font-size-medium
-        &__e-g
-            &_b
-                max-width: $width-base-desktop-small
-                min-width: $width-base-desktop-small
+        &__e-g_b
+            @for $i from 2 through 12
+                @for $j from 1 through $i - 1
+                    >.b__e_#{$j}-#{$i}
+                        +width-element-max-and-min($i, $j, $width-base-desktop-small)
 @media (min-width: $screen-desktop-medium) and (max-width: $screen-desktop-large - 1px)
     .b
         font-size: $font-size-large
-        &__e-g
-            &_b
-                max-width: $width-base-desktop-medium
-                min-width: $width-base-desktop-medium
+        &__e-g_b
+            @for $i from 2 through 12
+                @for $j from 1 through $i - 1
+                    >.b__e_#{$j}-#{$i}
+                        +width-element-max-and-min($i, $j, $width-base-desktop-medium)
 @media (min-width: $screen-desktop-large)
     .b
         font-size: $font-size-huge
-        &__e-g
-            &_b
-                max-width: $width-base-desktop-large
-                min-width: $width-base-desktop-large
+        &__e-g_b
+            @for $i from 2 through 12
+                @for $j from 1 through $i - 1
+                    >.b__e_#{$j}-#{$i}
+                        +width-element-max-and-min($i, $j, $width-base-desktop-large)
 @media (min-width: $screen-desktop-small)
     .b
         &__h
