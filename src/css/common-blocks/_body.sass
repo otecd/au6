@@ -8,6 +8,9 @@
 //         _base (b)
 //     __element (e)
 //         _[number] (1 to 12)
+//     __element-space (e-s)
+//         _before_[number] (b_[1 to 12])
+//         _after_[number] (a_[1 to 12])
 //
 +font-face('Open Sans', '../fnt/Open_Sans/OpenSans')
 +font-face('Open Sans', '../fnt/Open_Sans/OpenSans-Extrabold', 800)
@@ -22,6 +25,7 @@
         style: normal
     line-height: 1.5
     word-wrap: break-word
+    overflow-x: hidden
     &__h,
     &__m,
     &__s-l,
@@ -40,3 +44,7 @@
         @for $j from 1 through 12
             &_#{$j}
                 max-width: ($j / 12) * 100%
+            &-s_b_#{$j}
+                margin-left: ($j / 12) * 100%
+            &-s_a_#{$j}
+                margin-right: ($j / 12) * 100%

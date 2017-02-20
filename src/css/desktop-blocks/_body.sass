@@ -12,6 +12,10 @@
             @for $j from 1 through 12
                 >.b__e_#{$j}
                     +width-element-max-and-min(12, $j, $width-base-desktop-small, true, false)
+                >.b__e-s_b_#{$j}
+                    margin-left: $j * $width-base-desktop-small / 12
+                >.b__e-s_a_#{$j}
+                    margin-right: $j * $width-base-desktop-small / 12
 @media (min-width: $screen-desktop-medium) and (max-width: $screen-desktop-large - 1px)
     .b
         font-size: $font-size-large
@@ -26,6 +30,10 @@
             @for $j from 1 through 12
                 >.b__e_#{$j}
                     +width-element-max-and-min(12, $j, $width-base-desktop-medium, true, false)
+                >.b__e-s_b_#{$j}
+                    margin-left: $j * $width-base-desktop-medium / 12
+                >.b__e-s_a_#{$j}
+                    margin-right: $j * $width-base-desktop-medium / 12
 @media (min-width: $screen-desktop-large)
     .b
         font-size: $font-size-huge
@@ -40,6 +48,10 @@
             @for $j from 1 through 12
                 >.b__e_#{$j}
                     +width-element-max-and-min(12, $j, $width-base-desktop-large, true, false)
+                >.b__e-s_b_#{$j}
+                    margin-left: $j * $width-base-desktop-large / 12
+                >.b__e-s_a_#{$j}
+                    margin-right: $j * $width-base-desktop-large / 12
 @media (min-width: $screen-desktop-small)
     .b
         &__h

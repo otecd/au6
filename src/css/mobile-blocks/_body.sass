@@ -12,6 +12,10 @@
             @for $j from 1 through 12
                 >.b__e_#{$j}
                     +width-element-max-and-min(12, $j, $width-base-mobile-small, true, false)
+                >.b__e-s_b_#{$j}
+                    margin-left: $j * $width-base-mobile-small / 12
+                >.b__e-s_a_#{$j}
+                    margin-right: $j * $width-base-mobile-small / 12
 @media (min-width: $screen-mobile-medium) and (max-width: $screen-mobile-large - 1px)
     .b
         font-size: $font-size-small
@@ -26,6 +30,10 @@
             @for $j from 1 through 12
                 >.b__e_#{$j}
                     +width-element-max-and-min(12, $j, $width-base-mobile-medium, true, false)
+                >.b__e-s_b_#{$j}
+                    margin-left: $j * $width-base-mobile-medium / 12
+                >.b__e-s_a_#{$j}
+                    margin-right: $j * $width-base-mobile-medium / 12
 @media (min-width: $screen-mobile-large) and (max-width: $screen-desktop-small - 1px)
     .b
         font-size: $font-size-medium
@@ -40,6 +48,10 @@
             @for $j from 1 through 12
                 >.b__e_#{$j}
                     +width-element-max-and-min(12, $j, $width-base-mobile-large, true, false)
+                >.b__e-s_b_#{$j}
+                    margin-left: $j * $width-base-mobile-large / 12
+                >.b__e-s_a_#{$j}
+                    margin-right: $j * $width-base-mobile-large / 12
 @media (max-width: $screen-desktop-small - 1px)
     .b
         &__h
