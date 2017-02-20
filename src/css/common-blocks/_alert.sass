@@ -1,0 +1,51 @@
+// alert
+//     _success
+//     _info
+//     _warning
+//     _danger
+//     __link
+//     __icon
+//
+.a
+    color: $color-gray-darker
+    background-color: lighten($color-gray-light, 8%)
+    margin: 10px
+    padding: 10px
+    border-radius: 5px
+    &_s
+        color: $color-success
+        background-color: $color-success-lighter
+        .a__l
+            color: darken($color-success, 15%)
+        .a__i
+            // stroke: darken($color-success, 15%)
+    &_i
+        color: $color-info
+        background-color: $color-info-lighter
+        .a__l
+            color: darken($color-info, 15%)
+        .a__i
+            // stroke: darken($color-info, 15%)
+    &_w
+        color: $color-warning
+        background-color: $color-warning-lighter
+        .a__l
+            color: darken($color-warning, 15%)
+        .a__i
+            // stroke: darken($color-warning, 15%)
+    &_d
+        color: $color-danger
+        background-color: $color-danger-lighter
+        .a__l
+            color: darken($color-danger, 15%)
+        .a__i
+            // stroke: darken($color-danger, 15%)
+    &__l
+        text-decoration: none
+        &:hover
+            text-decoration: underline
+    &__i
+        // width: 2em
+        // vertical-align: middle
+        // fill: none
+        // stroke-width: 2px
