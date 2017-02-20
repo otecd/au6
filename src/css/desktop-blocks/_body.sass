@@ -1,27 +1,45 @@
 @media (min-width: $screen-desktop-small) and (max-width: $screen-desktop-medium - 1px)
     .b
         font-size: $font-size-medium
+        // for base width of content:
+        &__m
+            +width-element-max-and-min(12, 6, $width-base-desktop-small)
+        &__s-l,
+        &__s-r
+            +width-element-max-and-min(12, 3, $width-base-desktop-small)
+        // END for base width of content
         &__e-g_b
-            @for $i from 2 through 12
-                @for $j from 1 through $i - 1
-                    >.b__e_#{$j}-#{$i}
-                        +width-element-max-and-min($i, $j, $width-base-desktop-small)
+            @for $j from 1 through 12
+                >.b__e_#{$j}
+                    +width-element-max-and-min(12, $j, $width-base-desktop-small, true, false)
 @media (min-width: $screen-desktop-medium) and (max-width: $screen-desktop-large - 1px)
     .b
         font-size: $font-size-large
+        // for base width of content:
+        &__m
+            +width-element-max-and-min(12, 8, $width-base-desktop-medium)
+        &__s-l,
+        &__s-r
+            +width-element-max-and-min(12, 2, $width-base-desktop-medium)
+        // END for base width of content
         &__e-g_b
-            @for $i from 2 through 12
-                @for $j from 1 through $i - 1
-                    >.b__e_#{$j}-#{$i}
-                        +width-element-max-and-min($i, $j, $width-base-desktop-medium)
+            @for $j from 1 through 12
+                >.b__e_#{$j}
+                    +width-element-max-and-min(12, $j, $width-base-desktop-medium, true, false)
 @media (min-width: $screen-desktop-large)
     .b
         font-size: $font-size-huge
+        // for base width of content:
+        &__m
+            +width-element-max-and-min(12, 8, $width-base-desktop-large)
+        &__s-l,
+        &__s-r
+            +width-element-max-and-min(12, 2, $width-base-desktop-large)
+        // END for base width of content
         &__e-g_b
-            @for $i from 2 through 12
-                @for $j from 1 through $i - 1
-                    >.b__e_#{$j}-#{$i}
-                        +width-element-max-and-min($i, $j, $width-base-desktop-large)
+            @for $j from 1 through 12
+                >.b__e_#{$j}
+                    +width-element-max-and-min(12, $j, $width-base-desktop-large, true, false)
 @media (min-width: $screen-desktop-small)
     .b
         &__h
@@ -35,7 +53,3 @@
             order: 4
         &__f
             order: 5
-        &__s-l,
-        &__s-r
-            max-width: 200px
-            min-width: 200px
