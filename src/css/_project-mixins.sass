@@ -46,9 +46,11 @@
     	&:hover
     		background-image: url($url-image-hover)
 
-=width-element-max-and-min($i, $j, $width-base)
-    max-width: $j * $width-base / $i
-    // min-width: $j * $width-base / $i
+=width-element-max-and-min($i, $j, $width-base, $max: true, $min: true)
+    @if $max
+        max-width: $j * $width-base / $i
+    @if $min
+        min-width: $j * $width-base / $i
 
 =button-colors($color-font: $color-gray-darker, $color-background: lighten($color-gray-light, 8%), $not-disables: true, $width-border: 1px, $type-border: solid)
     color: $color-font
