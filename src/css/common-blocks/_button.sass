@@ -15,14 +15,14 @@
     padding: .6em 1em
     font-size: inherit
     &_a
-        +button-colors($color-accent, $color-accent-lighter)
+        +button-colors($color-accent)
     &_s
-        +button-colors($color-success, $color-success-lighter)
+        +button-colors($color-success)
     &_i
-        +button-colors($color-info, $color-info-lighter)
+        +button-colors($color-info)
     &_w
-        +button-colors($color-warning, $color-warning-lighter)
+        +button-colors($color-warning)
     &_d
-        +button-colors($color-danger, $color-danger-lighter)
+        +button-colors($color-danger)
     &_di
-        +button-colors($color-gray-lighter, lighten($color-gray-lighter, 30%), false)
+        +button-colors(lighten($color-gray-lighter, 30%), $color-gray-lighter, false)
