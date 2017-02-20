@@ -52,15 +52,36 @@
     @if $min
         min-width: $j * $width-base / $i
 
-=button-colors($color-font: $color-gray-darker, $color-background: lighten($color-gray-light, 8%), $not-disables: true, $width-border: 1px, $type-border: solid)
+=button-colors($color-background: $color-gray-darker, $color-font: $color-white, $not-disabled: true, $width-border: 1px, $type-border: solid)
     color: $color-font
     background-color: $color-background
     border: $width-border $type-border $color-font
-    @if ($not-disables)
+    box-shadow: none
+    @if ($not-disabled)
+        box-shadow: 0 4px 5px lighten($color-black, 60%)
+        &:hover
+            border: $width-border $type-border $color-font
+            box-shadow: 0 6px 8px lighten($color-black, 55%)
+        &:focus
+            outline: none
+        &:active
+            box-shadow: 0 3px 4px lighten($color-black, 65%)
+    @else
+        &:hover
+            border: $width-border $type-border $color-font
+            box-shadow: none
+
+=button-colors-transparent($color-font: $color-gray-darker, $color-background: $color-white, $not-disabled: true, $width-border: 1px, $type-border: solid)
+    color: $color-font
+    background-color: $color-background
+    border: $width-border $type-border $color-font
+    @if ($not-disabled)
         &:hover
             color: $color-background
             background-color: $color-font
             border: $width-border $type-border $color-background
+        &:focus
+            outline: none
         &:active
             background-color: darken($color-font, 10%)
     @else
