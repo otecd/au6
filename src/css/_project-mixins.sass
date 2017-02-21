@@ -12,7 +12,6 @@
         src: $src
 
 =flex-box-init($is-inline: false, $wrap: wrap, $no-gitter: true)
-    // display: if($is-inline, -webkit-inline-box, -webkit-box)
     display: if($is-inline, inline-flex, flex)
     flex-wrap: $wrap
     @if $no-gitter
@@ -51,6 +50,7 @@
         max-width: $j * $width-base / $i
     @if $min
         min-width: $j * $width-base / $i
+    flex-basis: $j * $width-base / $i
 
 =input-colors($color-line: $color-gray, $color-font: $color-black, $not-disabled: true, $width-border: 1px)
     color: $color-font
