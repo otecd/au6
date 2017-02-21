@@ -1,17 +1,22 @@
 // heading (h)
+//     _[number] (1, 2, 3)
 //     _normal (n)
 //     _italic (i)
 //     __additional (a)
 //         _inline (i)
 //
 .h
-    padding: 0
+    padding: .5em .5rem
     font-weight: 700
     &__a
-        margin: 10px auto
+        margin: 0
+        font-size: 0.7em
         &_i
             display: inline
     &_n
         font-weight: 400
     &_i
         font-style: italic
+    @each $num, $val in $font-size-headings-coefficient
+        &_#{$num}
+             font-size: $val * 1rem
