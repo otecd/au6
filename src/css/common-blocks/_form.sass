@@ -1,0 +1,17 @@
+// form (f)
+//     _singleline (s)
+//     __input (i)
+//         _disabled (di)
+//     __button (b)
+//
+.f
+    display: flex
+    flex-direction: column
+    &_s
+        flex-direction: row
+    &__i
+        +input-colors()
+        &_di
+            +input-colors($color-gray-lighter, $color-gray-lighter, false)
+
+    &__b
