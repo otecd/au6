@@ -52,11 +52,33 @@
     @if $min
         min-width: $j * $width-base / $i
 
+=input-colors($color-line: $color-gray, $color-font: $color-black, $not-disabled: true, $width-border: 1px)
+    color: $color-font
+    background-color: transparent
+    border:
+        top: none
+        left: none
+        right: none
+        bottom: $width-border solid $color-line
+    @if ($not-disabled)
+        // box-shadow: 0 2px 5px lighten($color-black, 70%)
+        &:hover
+            // box-shadow: 0 4px 7px lighten($color-black, 65%)
+        &:focus
+            box-shadow: 0 2px lighten($color-black, 65%)
+            outline: none
+            border-color: $color-black
+    @else
+        box-shadow: none
+        cursor: not-allowed
+        color: $color-gray-light
+        &:hover
+            box-shadow: none
+
 =button-colors($color-background: $color-gray-darker, $color-font: $color-white, $not-disabled: true, $width-border: 1px, $type-border: solid)
     color: $color-font
     background-color: $color-background
     border: $width-border $type-border $color-font
-    box-shadow: none
     @if ($not-disabled)
         box-shadow: 0 4px 5px lighten($color-black, 60%)
         &:hover
@@ -67,6 +89,7 @@
         &:active
             box-shadow: 0 3px 4px lighten($color-black, 65%)
     @else
+        box-shadow: none
         &:hover
             border: $width-border $type-border $color-font
             box-shadow: none
