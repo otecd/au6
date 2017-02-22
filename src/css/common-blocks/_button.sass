@@ -3,7 +3,7 @@
 //     _success (s)
 //     _info (i)
 //     _warning (w)
-//     _danger (d)
+//     _error (e)
 //     _disabled (di)
 //
 .bu
@@ -22,7 +22,7 @@
         +button-colors($color-info)
     &_w
         +button-colors($color-warning)
-    &_d
-        +button-colors($color-danger)
+    &_e
+        +button-colors($color-error)
     &_di
         +button-colors(lighten($color-gray-lighter, 30%), $color-gray-lighter, false)

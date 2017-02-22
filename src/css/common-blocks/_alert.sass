@@ -2,50 +2,42 @@
 //     _success
 //     _info
 //     _warning
-//     _danger
+//     _error
 //     __link
-//     __icon
 //
 .a
     color: $color-gray-darker
-    background-color: lighten($color-gray-light, 8%)
-    margin: 10px
-    padding: 10px
-    border-radius: 5px
+    border:
+        width: .15em
+        style: solid
+    margin: .5em .5rem
+    padding: .75em 1rem
+    border-radius: 10px
     &_s
         color: $color-success
-        background-color: $color-success-lighter
+        border-color: $color-success
+        +background-image-alert('../img/_alert/a_s--bgr.svg')
         .a__l
             color: darken($color-success, 15%)
-        .a__i
-            // stroke: darken($color-success, 15%)
     &_i
         color: $color-info
-        background-color: $color-info-lighter
+        border-color: $color-info
+        +background-image-alert('../img/_alert/a_i--bgr.svg')
         .a__l
             color: darken($color-info, 15%)
-        .a__i
-            // stroke: darken($color-info, 15%)
     &_w
         color: $color-warning
-        background-color: $color-warning-lighter
+        border-color: $color-warning
+        +background-image-alert('../img/_alert/a_w--bgr.svg')
         .a__l
             color: darken($color-warning, 15%)
-        .a__i
-            // stroke: darken($color-warning, 15%)
-    &_d
-        color: $color-danger
-        background-color: $color-danger-lighter
+    &_e
+        color: $color-error
+        border-color: $color-error
+        +background-image-alert('../img/_alert/a_e--bgr.svg')
         .a__l
-            color: darken($color-danger, 15%)
-        .a__i
-            // stroke: darken($color-danger, 15%)
+            color: darken($color-error, 15%)
     &__l
         text-decoration: none
         &:hover
             text-decoration: underline
-    &__i
-        // width: 2em
-        // vertical-align: middle
-        // fill: none
-        // stroke-width: 2px

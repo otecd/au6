@@ -30,6 +30,14 @@
         position: center
         attachment: if($is-fixed, fixed, scroll)
 
+=background-image-alert($url)
+    background:
+        image: url($url)
+        size: 10em
+        repeat: no-repeat
+        position: right top
+    padding-right: 6em
+
 =background-texture($url, $is-fixed: false)
     background:
         image: url($url)
@@ -78,11 +86,11 @@
 =button-colors($color-background: $color-gray-darker, $color-font: $color-white, $not-disabled: true, $width-border: 1px, $type-border: solid)
     color: $color-font
     background-color: $color-background
-    border: $width-border $type-border $color-font
+    border: $width-border $type-border transparent
     @if ($not-disabled)
         box-shadow: 0 4px 5px lighten($color-black, 60%)
         &:hover
-            border: $width-border $type-border $color-font
+            border: $width-border $type-border transparent
             box-shadow: 0 6px 8px lighten($color-black, 55%)
         &:focus
             outline: none
@@ -91,7 +99,7 @@
     @else
         box-shadow: none
         &:hover
-            border: $width-border $type-border $color-font
+            border: $width-border $type-border transparent
             box-shadow: none
 
 =button-colors-transparent($color-font: $color-gray-darker, $color-background: $color-white, $not-disabled: true, $width-border: 1px, $type-border: solid)
