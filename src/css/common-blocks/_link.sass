@@ -1,0 +1,48 @@
+// link (l)
+//     _accent (a)
+//     _pale (p)
+//
+.l
+    position: relative
+    padding-right: 0
+    padding-left: 0
+    color: $color-main
+    text-decoration: none
+    transition: all 0.25s ease
+    &::after
+        content: ''
+        position: absolute
+        height: 0
+        width: 100%
+        top: 1.3em
+        right: 0
+        border-bottom:
+            width: 2px
+            style: dashed
+            color: $color-main
+    &:hover::after
+        border-bottom-style: solid
+    &:visited
+        color: $color-main
+    &:hover
+        color: $color-accent
+    &_a
+        color: $color-accent
+        &::after
+            border-bottom-color: $color-accent
+        &:visited
+            color: $color-accent
+        &:hover
+            color: $color-main
+            background-color: $color-accent
+    &_p
+        color: $color-main-pale
+        &::after
+            border-bottom: none
+        &:visited
+            color: $color-main-pale
+        &:hover::after
+            border-bottom:
+                width: 1px
+                style: solid
+                color: $color-main-pale
