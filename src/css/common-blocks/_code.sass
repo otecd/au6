@@ -1,0 +1,37 @@
+// .code (c)
+//     __html-tag (h-t)
+//     __html-attribute-name (h-a-n)
+//     __html-attribute-value (h-a-v)
+//     __html-tag-value (h-t-v)
+//
+.c
+    font:
+        family: monospace
+        weight: 400
+    &__h-t
+        display: inline
+        color: $color-gray-darker
+        &::before
+            content: '<'
+        &::after
+            content: '>'
+        &_closing
+            &::before
+                content: '</'
+    &__h-a-n
+        display: inline
+        color: $color-accent-lighter
+        &::before
+            content: ' '
+    &__h-a-v
+        display: inline
+        color: $color-accent
+        &::before
+            content: '="'
+            color: $color-accent-lighter
+        &::after
+            content: '"'
+            color: $color-accent-lighter
+    &__h-t-v
+        display: inline
+        color: $color-gray-light
