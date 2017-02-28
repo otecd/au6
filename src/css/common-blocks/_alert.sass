@@ -1,9 +1,9 @@
 // alert
+//     __link
 //     _success
 //     _info
 //     _warning
 //     _error
-//     __link
 //
 .a
     color: $color-gray-darker
@@ -13,31 +13,31 @@
     margin: .5em .5rem
     padding: .75em 1rem
     border-radius: 10px
+    &__l
+        text-decoration: none
+        &:hover
+            text-decoration: underline
     &_s
         color: $color-success
         border-color: $color-success
         +background-image-alert('../img/_alert/a_s--bgr.svg')
-        .a__l
+        &__l
             color: darken($color-success, 15%)
     &_i
         color: $color-info
         border-color: $color-info
         +background-image-alert('../img/_alert/a_i--bgr.svg')
-        .a__l
+        &__l
             color: darken($color-info, 15%)
     &_w
         color: $color-warning
         border-color: $color-warning
         +background-image-alert('../img/_alert/a_w--bgr.svg')
-        .a__l
+        &__l
             color: darken($color-warning, 15%)
     &_e
         color: $color-error
         border-color: $color-error
         +background-image-alert('../img/_alert/a_e--bgr.svg')
-        .a__l
+        &__l
             color: darken($color-error, 15%)
-    &__l
-        text-decoration: none
-        &:hover
-            text-decoration: underline
