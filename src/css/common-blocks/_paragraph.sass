@@ -1,0 +1,36 @@
+// paragraph (p)
+//     __title (t)
+//     __content (c)
+//     _example (e)
+//     _indentation (i)
+//
+.p
+    padding: 10px 0 0
+    margin: 0
+    font-size: 1em
+    &__t
+        margin: 0
+        padding: 10px 0
+        font-size: 1.2em
+    &__c
+        margin: 0
+        padding: 0
+    &_i
+        .p__t
+            text-indent: 1rem
+        .p__c
+            text-indent: 1rem
+    &_e
+        .p__t
+            padding: .4em .8rem
+            font-size: 1em
+            background-color: $color-gray-light
+            border: 2px solid $color-gray-light
+            border-top-right-radius: 5px
+            border-top-left-radius: 5px
+        .p__c
+            padding: .4em .8rem
+            background-color: $color-accent-opposite
+            border: 2px solid $color-gray-light
+            border-bottom-right-radius: 5px
+            border-bottom-left-radius: 5px
